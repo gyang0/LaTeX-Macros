@@ -1,0 +1,29 @@
+\ProvidesPackage{macros}[2024/11/26 v1.0 some macros]
+
+% Derivatives
+\newcommand{\dx}[1]{ \, \mathrm{d} #1 }
+\newcommand{\ddx}[1]{ \frac{\mathrm{d}}{\mathrm{d} #1} }
+\newcommand{\dfdx}[2]{ \frac{\mathrm{d} #1}{\mathrm{d} #2} }
+\newcommand{\ddfddx}[2]{ \frac{\mathrm{d}^2 #1}{\mathrm{d} #2^2} }
+\newcommand{\ddfdxdy}[3]{ \frac{\mathrm{d}^2 #1}{\mathrm{d} #2 \mathrm{d} #3} }
+
+% Partial derivatives
+\newcommand{\ppx}[1]{ \frac{\partial}{\partial #1} }
+\newcommand{\pfpx}[2]{ \frac{\partial #1}{\partial #2} }
+\newcommand{\ppfppx}[2]{ \frac{\partial^2 #1}{\partial #2^2} }
+\newcommand{\ppfpxpy}[3]{ \frac{\partial^2 #1}{\partial #2 \partial #3} }
+
+% Multivariable function operators
+\newcommand{\pgrad}[1]{ \mathbf{\nabla} #1 }
+\newcommand{\pdiv}[1]{ \mathbf{\nabla} \cdot \mathbf{#1} }
+\newcommand{\pcurl}[1]{ \mathbf{\nabla} \times \mathbf{#1} }
+\newcommand{\laplacian}[1]{ \mathbf{\nabla}^2 \, \mathbf{#1} }
+
+% Vectors
+\newcommand{\vect}{\mathbf}
+\newcommand{\ihat}{\hat{\vect{i}}}
+\newcommand{\jhat}{\hat{\vect{j}}}
+\newcommand{\khat}{\hat{\vect{k}}}
+
+% Units
+\newcommand{\ut}[1]{\ \text{#1}}
