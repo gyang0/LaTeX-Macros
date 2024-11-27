@@ -1,5 +1,12 @@
 \ProvidesPackage{macros}[2024/11/26 v1.0 some macros]
 
+% Parentheses & brackets
+\newcommand{\pp}[1]{\left(#1\right)}
+\newcommand{\bb}[1]{\left[#1\right]}
+
+% Matrices
+\newcommand{\mat}[1]{\begin{bmatrix}#1\end{bmatrix}}
+
 % Derivatives
 \newcommand{\dx}[1]{ \, \mathrm{d} #1 }
 \newcommand{\ddx}[1]{ \frac{\mathrm{d}}{\mathrm{d} #1} }
