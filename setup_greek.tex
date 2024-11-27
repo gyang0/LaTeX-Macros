@@ -1,0 +1,46 @@
+\documentclass[letterpaper, 12pt]{article}
+\usepackage[margin=1in, bmargin=1in]{geometry} % Document Margins
+\usepackage{parskip}
+\usepackage{setspace}
+\usepackage{booktabs}
+
+\usepackage[greek, english]{babel}
+\usepackage{teubner}
+\usepackage{libertine}
+
+% use with \tg{...}
+\newcommand{\tg}[1]{ \textgreek{#1} }
+
+% Custom version of \maketitle
+\newcommand{\mytitle}[4]{
+    \begin{center}
+        \begin{spacing}{1.1}
+            \huge\textbf{#1}
+            
+            \large\textbf{#2}
+        \end{spacing}
+
+        \medskip
+        {\Large #3}
+    \end{center}
+    \bigskip
+    #4
+    
+    \noindent\rule{\textwidth}{1pt}
+}
+
+
+\begin{document}
+    \mytitle{TITLE HERE}{CLEVER SUBTITLE HERE}{DATE}{
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    }
+
+    \section{Section 1}
+        \subsection{1.1}
+        \subsection{1.2}
+    
+    \section{Section 2}
+        \subsection{2.1}
+        \subsection{2.2}
+
+\end{document}
