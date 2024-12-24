@@ -1,0 +1,66 @@
+\documentclass[letterpaper, 12pt, landscape]{article}
+\usepackage[margin=1in, bmargin=1in]{geometry} % Document Margins
+\usepackage{setspace}
+\usepackage{libertine}
+
+\usepackage{paracol}
+\usepackage[left]{lineno}
+
+\usepackage{ulem}
+\newcommand{\ul}[1]{ \uline{#1} }
+
+\usepackage{verse}
+
+\usepackage{parskip}
+
+% Setup
+\setlength{\vindent}{0.25in} % Line wrap indentation
+\setlength{\leftmargini}{0.7em} % set the left margin to zero
+\setlength{\rightmargin}{0.7em}
+
+\setlength{\columnsep}{4.5em} % Column separation
+\verselinenumfont{\scriptsize}
+\setlength{\vrightskip}{-20pt}
+
+% Custom version of \maketitle
+\newcommand{\mytitle}[3]{
+    \begin{center}
+        \huge\textbf{#1}
+        
+        {\Large #2}
+    \end{center}
+    \bigskip
+    #3
+    
+    \noindent\rule{\textwidth}{1pt}
+}
+
+
+\begin{document}
+    \mytitle{TITLE}{DATE}{  
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    }
+    
+    \begin{paracol}{2}
+        \setstretch{1.5}
+        \raggedright
+        \poemlines{5}
+        \input latin
+
+        \switchcolumn
+
+        \poemlines{0}
+        \input english
+    \end{paracol}
+    
+    \noindent\rule{\textwidth}{1pt}
+    \section*{Notes}
+        \raggedright
+        \setstretch{1.15}
+        Note 1
+
+        Note 2
+
+        Note 3
+    
+\end{document}
